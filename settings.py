@@ -1,8 +1,9 @@
 import os
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+LANG = os.environ.get('LANG', 'en-US')
 
 try:
-    import local_settings
+    from local_settings import *
 except ImportError:
     pass

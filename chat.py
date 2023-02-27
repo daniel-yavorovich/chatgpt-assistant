@@ -6,14 +6,21 @@ openai.api_key = settings.OPENAI_API_KEY
 
 class OpenAIChat:
     def __init__(self):
-        self.prompt = "The following is a conversation with an AI assistant." \
-                      "The assistant is helpful, creative, clever, and very friendly.\n\n" \
-                      "Human: Hello, who are you?\n" \
-                      "AI: I am an AI created by OpenAI. How can I help you today?\n" \
-                      "Human: I'd like to cancel my subscription.\n" \
+        # self.prompt = "The following is a conversation with an AI assistant." \
+        #               "The assistant is helpful, creative, clever, and very friendly.\n\n" \
+        #               "Human: Hello, who are you?\n" \
+        #               "AI: I am an AI created by OpenAI. How can I help you today?\n" \
+        #               "Human: I'd like to cancel my subscription.\n" \
+        #               "AI:"
+        self.prompt = "Це діалог з ассистентом-психологом Густавом Юнгом." \
+                      "Психолог має мету підтримати людину та дати їй ресурс.\n" \
+                      "Використовуй цитати з книг Юнга у відповідях. Говори завжди, як Юнг.\n\n" \
+                      "Людина: Привіт!\n" \
+                      "AI: Привіт! Мене звати Юнг, я психотерапевт. Чим я можу допомогти?\n" \
+                      "Human: Я би розповісти тобі, як я зараз себе почуваю. Моживо, задати тобі декілька питань.\n" \
                       "AI:"
         self.temperature = 0.9
-        self.max_tokens = 150
+        self.max_tokens = 700
         self.top_p = 1
         self.frequency_penalty = 0.0
         self.presence_penalty = 0.6
